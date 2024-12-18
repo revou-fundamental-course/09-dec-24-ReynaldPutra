@@ -4,7 +4,171 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header class="main-header">
+      <div class="home-icon"></div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#our-package">Our Package</a>
+        <a href="#call-us">Call Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <header class="content-header">
+        <h1>Your Trusted Travel Agent's</h1>
+        <h3>Your Happiness is our Happiness</h3>
+      </header>
+
+      <!-- Main Content -->
+      <section class="main-content" id="home">
+        <!-- Banner Auto Slide -->
+        <aside class="banner">
+          <div class="banner-img banner-1"></div>
+          <div class="banner-img banner-2"></div>
+          <div class="banner-img banner-3"></div>
+        </aside>
+
+        <!-- Form Contact Us -->
+        <form class="main-form" action="submit">
+          <header class="form-header">
+            <h3>Contact Us</h3>
+            <p>Sales akan menghubungi anda 1x24 Jam setelah data kami terima</p>
+          </header>
+
+          <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="First and last name"
+            />
+            <p class="error" id="name-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email@email.com"
+            />
+            <p class="error" id="email-error"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">What are you interested in?</label>
+            <select name="interest" id="interest">
+              <option value="" disabled selected>Select an option</option>
+              <option value="beach-holidays">Beach Holidays</option>
+              <option value="adventure-travel">Adventure Travel</option>
+              <option value="city-tours">City Tours</option>
+              <option value="luxury-resorts">Luxury Resorts</option>
+              <option value="cultural-heritage">Cultural & Heritage</option>
+              <option value="nature-escapes">Nature Escapes</option>
+            </select>
+            <p class="error" id="interest-error"></p>
+          </div>
+
+          <button type="button" class="submit" onclick="validateForm()">
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <header id="our-package" class="our-package">
+          <h1>Our Package</h1>
+          <p>
+            Explore the best travel packages we offer, designed for your perfect
+            getaway.
+          </p>
+        </header>
+
+        <div class="package-cards">
+          <div class="package-card">
+            <img src="https://picsum.photos/500" alt="Beach Holidays" />
+            <h2>Beach Holidays</h2>
+            <p>Relaxwith our exclusive beach holidays package.</p>
+            <p class="price">$499</p>
+            <a href="#contact" class="package-button">Book Now</a>
+          </div>
+
+          <div class="package-card">
+            <img src="https://picsum.photos/700" alt="Adventure Travel" />
+            <h2>Adventure Travel</h2>
+            <p>Experience thrilling adventures in exotic locations.</p>
+            <p class="price">$799</p>
+            <a href="#contact" class="package-button">Book Now</a>
+          </div>
+
+          <div class="package-card">
+            <img src="https://picsum.photos/800" alt="City Tours" />
+            <h2>City Tours</h2>
+            <p>Explore the world's with a guided tour package.</p>
+            <p class="price">$399</p>
+            <a href="#contact" class="package-button">Book Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section id="call-us" class="call-us">
+        <header>
+          <h1>Call Us</h1>
+          <p>We're here to assist you! Reach out to us for any inquiries.</p>
+        </header>
+
+        <div class="contact-info">
+          <div class="phone">
+            <h3>Phone:</h3>
+            <p>+1 234 567 890</p>
+          </div>
+
+          <div class="email">
+            <h3>Email:</h3>
+            <p>support@example.com</p>
+          </div>
+
+          <div class="hours">
+            <h3>Office Hours:</h3>
+            <p>Mon - Fri: 9 AM - 6 PM</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <h3>Follow Us:</h3>
+          <ul>
+            <li><a href="https://www.facebook.com/revoU.co">Facebook</a></li>
+            <li><a href="https://www.instagram.com/revou_id/">Instagram</a></li>
+            <li><a href="https://x.com/revoudotco?lang=en">Twitter</a></li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+
+    <!-- Pop-up Modal -->
+    <div id="contactPopup" class="popup" style="display: none">
+      <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <!-- Close button inside the box -->
+        <h2>Thank You for Contacting Us!</h2>
+        <p>We'll get back to you soon.</p>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
